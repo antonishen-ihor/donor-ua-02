@@ -18,9 +18,9 @@ const accordionRootVariants = cva('', {
 const accordionItemVariants = cva('', {
   variants: {
     variant: {
-      default: 'border-b border-hairline',
-      outline: 'border border-hairline rounded-md px-4',
-      solid: 'rounded-md bg-surface-card px-4',
+      default: 'border-b border-pebble',
+      outline: 'border border-pebble rounded-xl px-4',
+      solid: 'rounded-xl bg-fog px-4',
     },
   },
   defaultVariants: { variant: 'default' },
@@ -42,7 +42,7 @@ const accordionTriggerVariants = cva(
 )
 
 const accordionContentVariants = cva(
-  'overflow-hidden text-sm text-body transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+  'overflow-hidden text-sm text-steel transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
   {
     variants: { variant: { default: '', outline: '', solid: '' } },
     defaultVariants: { variant: 'default' },

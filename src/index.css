@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply font-sans bg-surface-soft text-body antialiased;
+    @apply font-sans bg-mist text-ink antialiased;
   }
 }

@@ -45,14 +45,17 @@ function StatCard({ target, suffix, decimals, label }) {
   const { value, ref } = useCountUp(target, decimals)
 
   return (
-    <div ref={ref} className="bg-surface-card rounded-md px-8 py-10 flex flex-col gap-3 group cursor-default">
+    <div
+      ref={ref}
+      className="bg-fog rounded-xl px-8 py-10 flex flex-col gap-3 shadow-card-inset"
+    >
       <span
-        className="font-display font-bold text-ink leading-none tracking-[-0.8px] transition-colors duration-500 ease-in-out group-hover:text-primary"
+        className="font-display font-bold text-obsidian leading-none"
         style={{ fontSize: '44px' }}
       >
         {decimals > 0 ? value.toFixed(decimals) : Math.floor(value)}{suffix}
       </span>
-      <span className="text-base text-body leading-[1.4]">
+      <span className="text-sm text-steel leading-[1.5]">
         {label}
       </span>
     </div>
@@ -61,7 +64,7 @@ function StatCard({ target, suffix, decimals, label }) {
 
 export default function Impact() {
   return (
-    <section className="bg-surface-soft py-16">
+    <section className="bg-snow py-16">
       <div className="max-w-[900px] mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {stats.map((stat) => (

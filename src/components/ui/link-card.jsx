@@ -5,9 +5,9 @@ import { cn } from '../../lib/utils'
 const cardVariants = {
   initial: { scale: 1, y: 0 },
   hover: {
-    scale: 1.03,
-    y: -5,
-    transition: { type: 'spring', stiffness: 300, damping: 15 },
+    scale: 1.02,
+    y: -4,
+    transition: { duration: 0.25, ease: 'easeOut' },
   },
 }
 
@@ -19,8 +19,9 @@ const LinkCard = React.forwardRef(
         href={href}
         className={cn(
           'group relative flex h-72 w-full flex-col justify-between overflow-hidden',
-          'rounded-md bg-surface-card p-6',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-outer focus-visible:ring-offset-2',
+          'rounded-xl bg-fog p-6',
+          'shadow-card-inset',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-obsidian focus-visible:ring-offset-2',
           className
         )}
         variants={cardVariants}
@@ -31,10 +32,10 @@ const LinkCard = React.forwardRef(
       >
         {/* Text */}
         <div className="z-10">
-          <h3 className="mb-2 font-display text-2xl font-bold tracking-tight text-ink">
+          <h3 className="mb-2 font-display text-xl font-bold tracking-tight text-obsidian">
             {title}
           </h3>
-          <p className="max-w-[80%] text-sm text-body leading-[1.5]">
+          <p className="max-w-[80%] text-sm text-steel leading-[1.5]">
             {description}
           </p>
         </div>
@@ -42,7 +43,7 @@ const LinkCard = React.forwardRef(
         {/* CTA label */}
         {cta && (
           <div className="z-10">
-            <span className="inline-flex items-center bg-secondary-bg text-ink text-xs font-bold rounded-md px-4 h-8">
+            <span className="inline-flex items-center bg-obsidian text-snow text-xs font-semibold rounded-pill px-4 h-8 shadow-cta">
               {cta}
             </span>
           </div>
@@ -54,7 +55,7 @@ const LinkCard = React.forwardRef(
             src={imageUrl}
             alt=""
             aria-hidden="true"
-            className="h-full w-full object-contain group-hover:scale-110 transition-transform duration-300 ease-out"
+            className="h-full w-full object-contain transition-transform duration-300 ease-out group-hover:scale-110"
           />
         </div>
       </motion.a>

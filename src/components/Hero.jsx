@@ -1,26 +1,34 @@
 export default function Hero() {
   return (
-    <section className="bg-surface-soft">
-      <div className="max-w-[1440px] mx-auto px-6 pt-32 pb-36 text-center">
+    <section className="bg-mist">
+      <div className="max-w-[1440px] mx-auto px-6 pt-28 pb-36 text-center">
+
+        <p className="inline-flex items-center gap-2 bg-fog border border-pebble text-xs font-semibold text-steel rounded-pill px-4 py-1.5 mb-8 tracking-wide uppercase">
+          Платформа донорства крові в Україні
+        </p>
 
         <h1
-          className="font-display font-bold text-ink leading-[1.1] tracking-[-1.2px] mb-6 whitespace-nowrap flex justify-center"
-          style={{ fontSize: 'clamp(72px, 6vw, 96px)' }}
+          className="font-display font-bold text-obsidian leading-[1.08] tracking-tight mb-6 flex flex-col items-center"
+          style={{ fontSize: 'clamp(52px, 6vw, 80px)' }}
         >
-          Донорство – це база
+          <span>Донорство –</span>
+          <span>
+            <span className="text-ash font-medium">це</span>
+            {' '}база
+          </span>
         </h1>
 
-        <p className="text-base text-body leading-[1.6] max-w-xl mx-auto mb-10">
+        <p className="text-base text-steel leading-[1.65] max-w-lg mx-auto mb-10" style={{ fontSize: '16px' }}>
           Кожен третій пацієнт в Україні не отримує донорську кров вчасно.
-          Ми тут, щоб це змінити. Все просто — стань донором або дізнайся,
+          Ми тут, щоб це змінити — стань донором або дізнайся,
           де можна здати кров.
         </p>
 
         <div className="flex items-center justify-center gap-3 flex-wrap">
-          <button className="bg-primary hover:bg-primary-pressed text-on-dark text-sm font-bold rounded-md px-6 h-11 transition-colors">
+          <button className="bg-obsidian hover:bg-graphite text-snow text-sm font-semibold rounded-pill px-6 h-11 transition-colors shadow-cta">
             Здати кров
           </button>
-          <button className="bg-secondary-bg hover:bg-secondary-pressed text-ink text-sm font-bold rounded-md px-6 h-11 transition-colors">
+          <button className="bg-snow hover:bg-mist text-graphite border border-graphite text-sm font-semibold rounded-pill px-6 h-11 transition-colors">
             Чи можу я бути донором
           </button>
         </div>

@@ -35,18 +35,18 @@ const items = [
 
 export default function WhoWeHelp() {
   return (
-    <section className="bg-surface-soft py-[120px]">
+    <section className="bg-obsidian py-[120px]">
       <div className="max-w-[900px] mx-auto px-6">
 
         {/* Header */}
         <div className="mb-12 text-center">
           <h2
-            className="font-display font-bold text-ink leading-[1.2] tracking-[-1.2px] mb-5"
+            className="font-display font-bold text-snow leading-[1.2] tracking-tight mb-5"
             style={{ fontSize: 'clamp(28px, 4vw, 44px)' }}
           >
             Кого рятує ваша кров
           </h2>
-          <p className="text-base text-body leading-[1.6] max-w-2xl mx-auto">
+          <p className="text-sm text-ash leading-[1.65] max-w-2xl mx-auto" style={{ fontSize: '15px' }}>
             До повномасштабного вторгнення росії понад 200 000 пацієнтів на рік потребували
             переливання донорської крові. Наразі кількість необхідної донорської крові та тих,
             хто її потребує, лише зростає.
@@ -54,11 +54,19 @@ export default function WhoWeHelp() {
         </div>
 
         {/* Accordion */}
-        <Accordion type="single" variant="solid" collapsible className="w-full">
+        <Accordion type="single" collapsible className="w-full space-y-2">
           {items.map((item) => (
-            <AccordionItem key={item.value} value={item.value}>
-              <AccordionTrigger>{item.trigger}</AccordionTrigger>
-              <AccordionContent>{item.content}</AccordionContent>
+            <AccordionItem
+              key={item.value}
+              value={item.value}
+              className="border border-graphite rounded-xl px-4 bg-graphite/10"
+            >
+              <AccordionTrigger className="text-snow [&>svg]:text-ash hover:[&>svg]:text-snow">
+                <span className="text-left font-semibold">{item.trigger}</span>
+              </AccordionTrigger>
+              <AccordionContent className="text-ash text-sm leading-[1.65]">
+                {item.content}
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
